@@ -6,6 +6,11 @@ const CounterApp = {
       age: '40'
     }
   },
+  methods: {
+    changeTitle(){
+      console.log('you click me')
+    }
+  }
 }
 
 Vue.createApp(CounterApp).mount('#counter')
