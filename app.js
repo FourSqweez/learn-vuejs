@@ -3,14 +3,15 @@ const CounterApp = {
     return {
       title: 'The final empire',
       author: 'Brandon Sanderson',
-      age: '40'
+      age: '40',
     }
   },
   methods: {
-    changeTitle(){
-      console.log('you click me')
-    }
-  }
+    changeTitle(title) {
+      //this.title = 'new title'
+      this.title = title
+    },
+  },
 }
 
 Vue.createApp(CounterApp).mount('#counter')
