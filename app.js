@@ -1,8 +1,9 @@
 const CounterApp = {
   data() {
     return {
-      title: 'Hi this is title',
-      number: 0
+      title: 'The final empire',
+      author: 'Brandon Sanderson',
+      age: '40'
     }
   },
 }
