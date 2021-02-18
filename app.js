@@ -1,6 +1,7 @@
-const CounterApp = {
+const Books = {
   data() {
     return {
+      showBooks: true,
       title: 'The final empire',
       author: 'Brandon Sanderson',
       age: '40',
@@ -11,7 +12,10 @@ const CounterApp = {
       //this.title = 'new title'
       this.title = title
     },
+    toggleShowBooks(){
+      this.showBooks = !this.showBooks
+    }
   },
 }
 
-Vue.createApp(CounterApp).mount('#counter')
+Vue.createApp(Books).mount('#books')
