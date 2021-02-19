@@ -20,19 +20,20 @@
   <body>
     <div id="app">
       <div v-if="showBooks">
-        <h2>{{title}} {{author}} {{age}}</h2>
+        <h2>{{books[0].title}} {{books[0].author}}</h2>
+
+        <ul>
+          <li v-for="book in books">
+            <h3>{{book.title}}</h3>
+            <p>{{book.author}}</p>
+          </li>
+        </ul>
       </div>
+
       <button @click="toggleShowBooks">
         <span v-if="showBooks">Hide books</span>
-        <span v-else>Show books</span>
+        <span v-else="!showBooks">Show books</span>
       </button>
-
-      <div v-show="showBooks">Current showing books use v-show</div>
-
-      <div class="box" @mouseover="handleMouseEvent($event, 5)">mouseover</div>
-      <div class="box" @mouseout="handleMouseEvent">mouseout</div>
-      <div class="box" @dblclick="handleMouseEvent">double click</div>
-      <div class="box" @mousemove="handleMouseMove">position : {{x}} {{y}}</div>
     </div>
 
     <script src="app.js" charset="utf-8"></script>

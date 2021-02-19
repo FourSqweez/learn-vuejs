@@ -2,9 +2,11 @@ const App = {
   data() {
     return {
       showBooks: true,
-      title: 'The final empire',
-      author: 'Brandon Sanderson',
-      age: '40',
+      books: [
+        { title: 'name of the wind', author: 'patrick rothfuss' },
+        { title: 'The final empire', author: 'Brandon Sanderson' },
+        { title: 'the way kings', author: 'Brandon Sanderson' },
+      ],
       x: 0,
       y: 0,
     }
