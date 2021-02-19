@@ -43,7 +43,9 @@ const App = {
       this.x = e.offsetX
       this.y = e.offsetY
     },
-   
+    toggleFav(book) {
+      book.isFav = !book.isFav
+    },
   },
 }
 
