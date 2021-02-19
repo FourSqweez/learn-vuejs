@@ -6,9 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Try Vue.js</title>
     <script src="https://unpkg.com/vue@next"></script>
+    <style>
+      .box {
+        padding: 100px 0;
+        width: 400px;
+        text-align: center;
+        background: #ddd;
+        margin: 20px;
+        display: inline-block;
+      }
+    </style>
   </head>
   <body>
-    <div id="books">
+    <div id="app">
       <div v-if="showBooks">
         <h2>{{title}} {{author}} {{age}}</h2>
       </div>
@@ -19,6 +29,10 @@
 
       <div v-show="showBooks">Current showing books use v-show</div>
 
+      <div class="box" @mouseover="handleMouseEvent($event, 5)">mouseover</div>
+      <div class="box" @mouseout="handleMouseEvent">mouseout</div>
+      <div class="box" @dblclick="handleMouseEvent">double click</div>
+      <div class="box" @mousemove="handleMouseMove">position : {{x}} {{y}}</div>
     </div>
 
     <script src="app.js" charset="utf-8"></script>
