@@ -41,7 +41,11 @@
         <h2>{{books[0].title}} {{books[0].author}}</h2>
 
         <ul>
-          <li v-for="book in books" :class="{fav: book.isFav}">
+          <li
+            v-for="book in books"
+            @click="book.isFav = !book.isFav"
+            :class="{fav: book.isFav}"
+          >
             <img :src="book.img" :alt="book.title" />
             <h3>{{book.title}}</h3>
             <p>{{book.author}}</p>
