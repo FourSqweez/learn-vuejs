@@ -1,6 +1,7 @@
 const App = {
   data() {
     return {
+      url: 'http://www.google.com',
       showBooks: true,
       books: [
         { title: 'name of the wind', author: 'patrick rothfuss' },
