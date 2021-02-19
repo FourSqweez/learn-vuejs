@@ -36,13 +36,12 @@
   </head>
   <body>
     <div id="app">
-      <a :href="url">url</a>
       <div v-if="showBooks">
         <h2>{{books[0].title}} {{books[0].author}}</h2>
 
         <ul>
           <li
-            v-for="book in books"
+            v-for="book in filteredBooks"
             :class="{fav: book.isFav}"
             @click="toggleFav(book)"
           >
